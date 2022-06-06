@@ -1,0 +1,40 @@
+﻿@using WebApplication1.Models
+@model Department
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <form class="form-horizontal">
+        <div class="form-group text-center text-black-50">
+            @Html.LabelFor(a => a.DeptID, new { @class = " control-label" }) :
+            <div class="text-dark">
+                @Html.ViewData.Model.DeptID
+            </div>
+        </div>
+        <div class="form-group text-center text-black-50">
+            @Html.LabelFor(a => a.Deptname, new { @class = " control-label" }) :
+            <div class="text-dark">
+                @Html.ViewData.Model.Deptname
+            </div>
+        </div>
+        <div class="form-group text-center text-black-50">
+            @Html.LabelFor(a => a.Capacity, new { @class = " control-label" }) :
+            <div class="text-dark">
+                @Html.ViewData.Model.Capacity
+            </div>
+        </div>
+        <div class="form-group text-center text-black-50">
+            <div class="text-dark">
+                @Html.ActionLink("Back", "Index", "Department", null, new { @class = "btn btn-dark " })
+            </div>
+        </div>
+    </form>
+</body>
+</html>

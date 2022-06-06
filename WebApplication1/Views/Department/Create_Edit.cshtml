@@ -1,0 +1,24 @@
+﻿@using WebApplication1.Models
+@model Department
+
+<div class="input-group">
+    <div class="form-group">
+        @Html.LabelFor(a => a.DeptID, new { @class = "col-sm-2 control-label", placeholder = "DeptID" })
+        <div class="col-sm-10">
+            @Html.TextBoxFor(a => a.DeptID, new { @class = "form-control", placeholder = "DeptID" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(a => a.Deptname, new { @class = "col-sm-2 control-label", placeholder = "DeptName" })
+        <div class="col-sm-10">
+            @Html.TextBoxFor(a => a.Deptname, new { @class = "form-control", placeholder = "DeptName" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(a => a.Capacity, new { @class = "col-sm-2 control-label", placeholder = "Capacity" })
+        <div class="col-sm-10">
+            @Html.TextBoxFor(a => a.Capacity, new { @class = "form-control", placeholder = "Capcity" })
+        </div>
+    </div>
+    </div>
+

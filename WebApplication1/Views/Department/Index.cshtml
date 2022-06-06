@@ -1,0 +1,87 @@
+﻿@using WebApplication1.Models;
+@model List<Department>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <h2 class="text-center bg-warning align-middle row-cols-5">Department</h2>
+        <div class="center">
+            <div class="row">
+
+                <div class="col-xl-3 col-md-12">
+                    <div class="card bg-primary text-dark mb-4">
+                        <div class="card-body">Home</div>
+                        <div class="card-footer d-flex align-items-center justify-content-between">
+                            <a class="small text-white stretched-link" href=@Url.Action("Index","Home")>Click here</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-12">
+                    <div class="card bg-warning text-dark mb-4">
+                        <div class="card-body">Create<span class="badge"> @Model.Count</span></div>
+                        <div class="card-footer d-flex align-items-center justify-content-between">
+                            <a class="small text-white stretched-link" href=@Url.Action("Create","Department")>Click here</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-table me-1"></i>
+                Department Table
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-hover" , id="datatablesSimple">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(a => a[0].DeptID) </th>
+                            <th>@Html.DisplayNameFor(a => a[0].Deptname)</th>
+                            <th>@Html.DisplayNameFor(a => a[0].Capacity)</th>
+                            <th>Details</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.DeptID</td>
+                                <td>@item.Deptname</td>
+                                <td>@item.Capacity</td>
+                                <td>
+                                    @Html.ActionLink("Details", "Details", "Department", new { id = item.DeptID }, new { @class = "btn btn-info" })
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Update", "Edit", "Department", new { id = item.DeptID }, new { @class = "btn btn-primary glyphicon glyphicon-wrench" })
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Remove", "Remove", "Department", new { id = item.DeptID }, new { @class = "btn btn-danger glyphicon glyphicon-remove" })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+    
+
+</body>
+</html>

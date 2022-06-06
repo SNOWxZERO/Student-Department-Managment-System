@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+    Layout = null;
+}
+<!DOCTYPE HTML>
+<html>
+
+
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>HOME</title>
+        <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="text-center bg-primary align-middle row-cols-5">HOME</h2>
+       
+        <div class="center">
+            <div class="row">
+
+                <div class="col-xl-3 col-md-12">
+                    <div class="card bg-warning text-dark mb-4">
+                        <div class="card-body">Department</div>
+                        <div class="card-footer d-flex align-items-center justify-content-between">
+                            <a class="small text-white stretched-link" href=@Url.Action("Index","Department")>View Details</a>
+                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-12">
+                    <div class="card bg-success text-dark mb-4">
+                        <div class="card-body">Students</div>
+                        <div class="card-footer d-flex align-items-center justify-content-between">
+                            <a class="small text-white stretched-link" href=@Url.Action("Index","Student")>View Details</a>
+                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="~/content/js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="~/content/assets/demo/chart-area-demo.js"></script>
+        <script src="~/content/assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="~/content/js/datatables-simple-demo.js"></script>
+
+    </body>
+</html>

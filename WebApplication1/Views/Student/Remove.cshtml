@@ -1,0 +1,26 @@
+﻿@using WebApplication1.Models
+@model Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Remove</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <h1>Are you sure to delete student ?</h1>
+        <h1>@Model.id : @Model.name : @Model.mail</h1>
+        
+        @Html.HiddenFor(a => a.id)
+        @Html.ActionLink("Remove", "RemoveConfirmed", "Student", new { id = Model.id }, new { @class = "btn btn-danger" })
+        
+        @Html.ActionLink("Cancel", "Index", "Student", null, new { @class = "btn btn-success" })
+    </div>
+</body>
+</html>

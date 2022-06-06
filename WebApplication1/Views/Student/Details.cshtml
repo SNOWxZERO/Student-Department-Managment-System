@@ -1,0 +1,52 @@
+﻿@using WebApplication1.Models
+@model Student
+@{ 
+    Layout = null;
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <form class="form-horizontal">
+        <div class="form-group text-center text-black-50">
+            @Html.LabelFor(a => a.id, new { @class = " control-label" }) :
+            <div class="text-dark">
+                @Html.ViewData.Model.id   
+            </div>
+        </div>
+        <div class="form-group text-center text-black-50">
+            @Html.LabelFor(a => a.name, new { @class = " control-label" }) :
+            <div class="text-dark">
+                @Html.ViewData.Model.name
+            </div>
+        </div>
+        <div class="form-group text-center text-black-50">
+            @Html.LabelFor(a => a.mail, new { @class = " control-label" }) :
+            <div class="text-dark">
+                @Html.ViewData.Model.mail
+            </div>
+        </div>
+        <div class="form-group text-center text-black-50">
+            @Html.LabelFor(a => a.phon, new { @class = " control-label" }) :
+            <div class="text-dark">
+                @Html.ViewData.Model.phon
+            </div>
+        </div>
+        <div class="form-group text-center text-black-50">
+            @Html.LabelFor(a => a.dep_id, new { @class = " control-label" }) :
+            <div class="text-dark">
+                @Html.ViewData.Model.dep_id
+            </div>
+        </div>
+        <div class="form-group text-center text-black-50">
+            <div class="text-dark">
+                @Html.ActionLink("Back", "Index", "Student", null, new { @class = "btn btn-dark " })
+            </div>
+        </div>
+    </form>
+</body>
+</html>

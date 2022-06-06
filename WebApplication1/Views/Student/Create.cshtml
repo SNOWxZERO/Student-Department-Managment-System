@@ -1,0 +1,24 @@
+﻿@using WebApplication1.Models
+@model Student
+@{
+    Layout = null;
+ }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <form class="form-horizontal" method="post" action="/student/create">
+        @Html.Partial("Create_1")
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-success">Create</button>
+                @Html.ActionLink("Cancel", "Index", "Student", null, new { @class = "btn btn-primary" })
+            </div>
+        </div>
+    </form>
+</body>
+</html>
